@@ -17,7 +17,7 @@ Users type a randomly generated sentence (using `@faker-js/faker`) and get insta
 ## 📸 Screenshot
 > Replace the image below with an actual screenshot of the app.
 
-![App Screenshot](./screenshot.png)
+![App Screenshot](Type-Challenge.png)
 
 ---
 
@@ -27,3 +27,4 @@ Users type a randomly generated sentence (using `@faker-js/faker`) and get insta
    ```bash
    git clone https://github.com/AliDiiv/Type-Challenge.git
    cd Type-Challenge
+
