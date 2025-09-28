@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faker } from '@faker-js/faker';
+import { faker } from '@faker-js/faker/locale/en';
 import { NgIf, NgFor } from '@angular/common';
 
 @Component({
