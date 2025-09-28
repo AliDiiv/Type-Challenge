@@ -1,0 +1,24 @@
+<div class="container mt-6">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-test-centered">
+        Typing Challenge
+      </h1>
+      <div class="field">
+        <p class="has-text-centered">
+          <span [class]="compare(letter, inputText[i])"
+            *ngFor="let letter of randomText.split(''); let i = index">{{letter}}</span>
+        </p>
+        <input class="input" type="text" #len (input)="onChangeInput(len.value)">
+      </div>
+
+      <progress class="progress is-info mt-3" [value]="progress" max="100">{{progress}}</progress>
+      <p class="has-text-centered mt-2">{{progress}}% completed</p>
+      <div class="box has-text-centered" *ngIf="inputText===randomText">
+        <p class="card-footer-item has-text-success has-text-weight-bold success-animate">
+          🎉 Success! Well done.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

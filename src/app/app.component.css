@@ -1,0 +1,30 @@
+/* Correctly typed character */
+.correct {
+  color: #23d160; /* Bulma green */
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+/* Incorrectly typed character */
+.incorrect {
+  color: #ff3860; /* Bulma red */
+  text-decoration: line-through;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+/* Pending character (not typed yet) */
+.pending {
+  color: #b5b5b5; /* Light gray */
+}
+
+/* Success animation */
+.success-animate {
+  animation: pop 0.4s ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
