@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { faker } from '@faker-js/faker';
 import { NgIf, NgFor } from '@angular/common';
 
