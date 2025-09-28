@@ -15,7 +15,6 @@ Users type a randomly generated sentence (using `@faker-js/faker`) and get insta
 ---
 
 ## 📸 Screenshot
-> Replace the image below with an actual screenshot of the app.
 
 ![App Screenshot](Type-Challenge.png)
 
@@ -36,4 +35,5 @@ Users type a randomly generated sentence (using `@faker-js/faker`) and get insta
    ```bash
    ng serve
  
+
 
