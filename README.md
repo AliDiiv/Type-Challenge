@@ -28,3 +28,12 @@ Users type a randomly generated sentence (using `@faker-js/faker`) and get insta
    git clone https://github.com/AliDiiv/Type-Challenge.git
    cd Type-Challenge
 
+2. Install dependencies:
+   ```bash
+   npm install
+
+ 3. Run the development server:
+   ```bash
+   ng serve
+ 
+
