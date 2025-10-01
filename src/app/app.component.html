@@ -1,24 +1,55 @@
 <div class="container mt-6">
   <div class="columns is-centered">
     <div class="box column is-one-third">
-      <h1 class="title has-test-centered">
+      <h1 class="title has-text-centered">
         Typing Challenge
       </h1>
+
+      <!-- Text to type -->
       <div class="field">
         <p class="has-text-centered">
           <span [class]="compare(letter, inputText[i])"
             *ngFor="let letter of randomText.split(''); let i = index">{{letter}}</span>
         </p>
-        <input class="input" type="text" #len (input)="onChangeInput(len.value)">
+        <input class="input" type="text" #len (input)="onChangeInput(len.value)" [disabled]="timeLeft === 0">
       </div>
 
+      <!-- Progress bar -->
       <progress class="progress is-info mt-3" [value]="progress" max="100">{{progress}}</progress>
       <p class="has-text-centered mt-2">{{progress}}% completed</p>
-      <div class="box has-text-centered" *ngIf="inputText===randomText">
+
+      <!-- Game stats -->
+      <div class="box has-text-centered mt-3">
+        <p><strong>⏳ Time Left:</strong> {{timeLeft}}s</p>
+        <p><strong>✅ Correct Characters:</strong> {{correctChars}}</p>
+        <p><strong>❌ Mistakes:</strong> {{mistakes}}</p>
+        <p><strong>⚡ Words Per Minute:</strong> {{wpm}}</p>
+      </div>
+
+      <!-- End of game message -->
+      <!-- <div class="box has-text-centered" *ngIf="inputText===randomText || timeLeft === 0">
         <p class="card-footer-item has-text-success has-text-weight-bold success-animate">
-          🎉 Success! Well done.
+          🎉 Game Over!
         </p>
+      </div> -->
+
+      <!-- End of game message -->
+      <div class="box has-text-centered" *ngIf="timeLeft === 0 || inputText===randomText">
+        <p class="card-footer-item has-text-weight-bold success-animate" [ngClass]="{
+      'has-text-success': inputText===randomText,
+      'has-text-danger': timeLeft === 0 && inputText !== randomText
+    }">
+          {{ inputText===randomText ? '🎉 You Won! Great Job!' : '⏱️ Time\'s Up! Try Again.' }}
+        </p>
+      </div>
+
+      <!-- Restart button -->
+      <div class="has-text-centered mt-3">
+        <button class="button is-primary" (click)="restartGame()">🔄 New Game</button>
       </div>
     </div>
   </div>
+  <p class="has-text-centered mt-3"> developed by Ali Mahmoudjafari<br>
+    <span>version 1.1.0</span>
+  </p>
 </div>
