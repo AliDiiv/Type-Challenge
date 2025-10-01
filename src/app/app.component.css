@@ -23,8 +23,22 @@
   animation: pop 0.4s ease-in-out;
 }
 
+/* Losing message (red) */
+.has-text-danger {
+  color: #ff3860; /* Bulma red */
+  font-weight: bold;
+}
+
 @keyframes pop {
-  0% { transform: scale(0.8); opacity: 0; }
-  60% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
